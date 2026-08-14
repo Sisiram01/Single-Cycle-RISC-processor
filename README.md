@@ -1,10 +1,10 @@
-# 🧠 Single-Cycle RISC Processor (Verilog)
+# Single-Cycle RISC Processor (Verilog)
 
 An implementation of a custom 32-bit single-cycle RISC processor designed in Verilog and simulated using Xilinx Vivado. This processor supports basic arithmetic, logic, memory, and branching operations with a fixed instruction format and unified memory.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Instruction Format**: 32-bit fixed format.
 - **Registers**: 32 General Purpose Registers (GPRs), 16-bit wide.
@@ -22,7 +22,7 @@ An implementation of a custom 32-bit single-cycle RISC processor designed in Ver
 
 ---
 
-## 📁 File Overview
+## File Overview
 
 | File                   | Description                            |
 |------------------------|----------------------------------------|
@@ -38,7 +38,7 @@ An implementation of a custom 32-bit single-cycle RISC processor designed in Ver
 
 ---
 
-## 🧪 Simulation & Test
+## Simulation & Test
 
 To run:
 
@@ -49,7 +49,7 @@ To run:
 
 ---
 
-## 🧠 Control Unit Signals
+## Control Unit Signals
 
 | Opcode   | Instruction           | r_sel | wb_sel | alu_m | jmp | be | bne | mem_rd | mem_wr | alu_sel | r_wr |
 |----------|------------------------|--------|--------|--------|------|-----|------|----------|----------|----------|-------|
@@ -72,7 +72,7 @@ To run:
 
 ---
 
-## ⚙️ ALU Control Unit
+## ALU Control Unit
 
 | alu_m | Opcode    | alu_control_in | ALU Operation       | alu_cnt |
 |-------|-----------|----------------|----------------------|---------|
@@ -91,9 +91,9 @@ To run:
 
 ---
 
-## 🧩 Instruction Formats
+## Instruction Formats
 
-### 🟦 M-Type (Memory Access)
+### M-Type (Memory Access)
 
 | Field        | Op (6) | Rt (5) | Rs (5) | Offset / Immediate (16) |
 |--------------|--------|--------|--------|--------------------------|
@@ -104,7 +104,7 @@ To run:
 
 ---
 
-### 🟨 R-Type (Arithmetic/Logical)
+### R-Type (Arithmetic/Logical)
 
 | Field        | Op (6) | Rd (5) | Rs (5) | Rb (5) | Unused (11) |
 |--------------|--------|--------|--------|--------|--------------|
@@ -114,7 +114,7 @@ To run:
 
 ---
 
-### 🟩 MOV (Register-to-Register)
+### MOV (Register-to-Register)
 
 | Field        | Op (6) | Rd (5) | Rs (5) | Unused (16) |
 |--------------|--------|--------|--------|--------------|
@@ -124,7 +124,7 @@ To run:
 
 ---
 
-### 🟧 I-Type (MOVI - Move Immediate)
+### I-Type (MOVI - Move Immediate)
 
 | Field        | Op (6) | Rd (5) | Immediate (16) | Unused (5) |
 |--------------|--------|--------|----------------|------------|
@@ -134,7 +134,7 @@ To run:
 
 ---
 
-### 🟥 Branch (BEQ / BNE)
+### Branch (BEQ / BNE)
 
 | Field        | Op (6) | Rs (5) | Rt (5) | Offset (16) |
 |--------------|--------|--------|--------|--------------|
@@ -145,7 +145,7 @@ To run:
 
 ---
 
-### 🟪 Jump Instruction
+### Jump Instruction
 
 | Field        | Op (6) | Jump Address (16) | Unused (10) |
 |--------------|--------|-------------------|-------------|
@@ -156,6 +156,6 @@ To run:
 
 ---
 
-## 🔌 Schematic
+## Schematic
 
 ![Processor Architecture Schematic](schematic.png)
